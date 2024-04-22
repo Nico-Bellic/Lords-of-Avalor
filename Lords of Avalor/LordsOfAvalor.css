@@ -1,3 +1,8 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 #resources {
     display: flex;
     justify-content: space-between;
@@ -10,14 +15,13 @@
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-#lumber, #food, #gold, #steel {
+#lumber, #food, #gold, #stone {
     font-size: 25px;
     color: white;
     display: inline-block;
     text-align: center;
     width: 22%;
 }
-
 
 #scouting {
     display: inline-block;
@@ -33,6 +37,20 @@
     border-radius: 10px; 
     color: white;
 }
+
+.detalhes {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #f1f1f1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px;
+    z-index: 1;
+}
+
 
 #scouting img:hover {
     transform: scale(1.10);
@@ -52,9 +70,8 @@
     background-size: cover;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    display: flex;
 }
-
 
 #millbtn {
     display: inline-block;
@@ -73,16 +90,76 @@
     width: 200px;
 }
 
-
-#millcost {
-    font-size: 20px;
+#quarrybtn {
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    font-size: 25px;
+    background-color: rgba(0, 0, 0, 0.5); 
+    color: white;
+    border: none;
+    border-radius: 10px; 
+    padding: 10px 20px; 
+    width: 200px;
 }
 
-#mills {
-    font-size: 20px;
+#minebtn {
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 65%;
+    font-size: 25px;
+    background-color: rgba(0, 0, 0, 0.5); 
+    color: white;
+    border: none;
+    border-radius: 10px; 
+    padding: 10px 20px; 
+    width: 200px;
+}
+
+#lumbermillbtn {
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 85%;
+    font-size: 25px;
+    background-color: rgba(0, 0, 0, 0.5); 
+    color: white;
+    border: none;
+    border-radius: 10px; 
+    padding: 10px 20px; 
+    width: 200px;
 }
 
 #millimg {
+    float: left;
+    height: 60px;
+    width: 100px;
+}
+
+#quarryimg {
+    float: left;
+    height: 60px;
+    width: 100px;
+}
+
+#mineimg {
+    float: left;
+    height: 60px;
+    width: 100px;
+}
+
+#lumbermillimg {
     float: left;
     height: 60px;
     width: 100px;
