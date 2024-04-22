@@ -45,7 +45,7 @@ function grantResources() {
                 document.getElementById("scouting").innerHTML = `<button id="scouting">
                 <img src="Images\\Scouting.png" length="75" width="150"></button>`;
             }
-        }, 10); 
+        }, 1000); 
     }
 }
 
