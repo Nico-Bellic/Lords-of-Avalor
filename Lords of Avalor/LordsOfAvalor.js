@@ -146,7 +146,7 @@ document.getElementById("minebtn").addEventListener("click", function () {
         mineCostFood = Math.round(mineCostFood * 1.15);
 
         document.getElementById("minecoststone").innerHTML = `<img src="Images\\Stone.png" height="25" width="25"/> ${mineCostStone}`;
-        document.getElementById("minecoststone").innerHTML = `<img src="Images\\Food.png" height="25" width="25"/> ${mineCostFood}`;
+        document.getElementById("minecostfood").innerHTML = `<img src="Images\\Food.png" height="25" width="25"/> ${mineCostFood}`;
         document.getElementById("minegives").innerHTML = `${mines} Mines, Each Produces 9 <img src="Images\\Gold.png" height="25" width="25"/>`;
 
         setInterval(function () {
@@ -183,7 +183,7 @@ document.getElementById("lumbermillbtn").addEventListener("click", function () {
 
         setInterval(function () {
             for (let i = 0; i < lumberMills; i++) {
-                resources.food += 7;
+                resources.lumber += 7;
             }
             document.getElementById("lumber").innerHTML = `<img src="Images\\Lumber.png" height="25" width="25"/> ${resources.lumber}`;
         }, 3500);
