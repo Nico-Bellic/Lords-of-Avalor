@@ -3,6 +3,11 @@ let gold = 0;
 let food = 0; 
 let stone = 0;
 
+let millInterval;
+let quarryInterval;
+let mineInterval;
+let lumberMillInterval;
+
 let mills = 0;
 let millCostLumber = 15;
 let millCostGold = 17;
