@@ -179,7 +179,7 @@ document.getElementById("lumbermillbtn").addEventListener("click", function () {
 
         document.getElementById("lumbermillcostgold").innerHTML = `<img src="Images\\Gold.png" height="25" width="25"/> ${lumbermillCostGold}`;
         document.getElementById("lumbermillcoststone").innerHTML = `<img src="Images\\Stone.png" height="25" width="25"/> ${lumbermillCostStone}`;
-        document.getElementById("lumbermillgives").innerHTML = `${lumberMills} Lumbermills, Each Produces 7 <img src="Images\\Lumber.png" height="25" width="25"/>`;
+        document.getElementById("lumbermillgives").innerHTML = `${lumberMills} Lumber Mills, Each Produces 7 <img src="Images\\Lumber.png" height="25" width="25"/>`;
 
         setInterval(function () {
             for (let i = 0; i < lumberMills; i++) {
