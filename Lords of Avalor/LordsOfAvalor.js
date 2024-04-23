@@ -71,9 +71,11 @@ document.addEventListener("DOMContentLoaded", function() {
 document.getElementById("millbtn").addEventListener("click", function () {
     console.log("Botão 'mill' clicado");
 
+    
     if (resources.lumber >= millCostLumber && resources.gold >= millCostGold) {
         console.log("Recursos são suficientes para construir um Moinho");
-
+        
+        clearInterval(millInterval);
         resources.lumber -= millCostLumber;
         resources.gold -= millCostGold;
         mills += 1;
@@ -85,7 +87,7 @@ document.getElementById("millbtn").addEventListener("click", function () {
         document.getElementById("millcostgold").innerHTML = `<img src="Images\\Gold.png" height="25" width="25"/> ${millCostGold}`;
         document.getElementById("millgives").innerHTML = `${mills} Mills, Each Produces 5 <img src="Images\\Food.png" height="25" width="25"/>`;
 
-        setInterval(function () {
+        millInterval = setInterval(function () {
             for (let i = 0; i < mills; i++) {
                 resources.food += 5;
             }
@@ -105,7 +107,8 @@ document.getElementById("quarrybtn").addEventListener("click", function () {
 
     if (resources.food >= quarryCostFood && resources.lumber >= quarryCostLumber) {
         console.log("Recursos são suficientes para construir uma Pedreira");
-
+        
+        clearInterval(quarryInterval);
         resources.food -= quarryCostFood;
         resources.lumber -= quarryCostLumber;
         quarries += 1;
@@ -117,7 +120,7 @@ document.getElementById("quarrybtn").addEventListener("click", function () {
         document.getElementById("quarrycostlumber").innerHTML = `<img src="Images\\Lumber.png" height="25" width="25"/> ${quarryCostLumber}`;
         document.getElementById("quarrygives").innerHTML = `${quarries} Quarries, Each Produces 8 <img src="Images\\Stone.png" height="25" width="25"/>`;
 
-        setInterval(function () {
+        quarryInterval = setInterval(function () {
             for (let i = 0; i < quarries; i++) {
                 resources.stone += 8;
             }
@@ -138,6 +141,7 @@ document.getElementById("minebtn").addEventListener("click", function () {
     if (resources.stone >= mineCostStone && resources.food >= mineCostFood) {
         console.log("Recursos são suficientes para construir uma Mina de Ouro");
 
+        clearInterval(mineInterval);
         resources.stone -= mineCostStone;
         resources.food -= mineCostFood;
         mines += 1;
@@ -149,7 +153,7 @@ document.getElementById("minebtn").addEventListener("click", function () {
         document.getElementById("minecostfood").innerHTML = `<img src="Images\\Food.png" height="25" width="25"/> ${mineCostFood}`;
         document.getElementById("minegives").innerHTML = `${mines} Mines, Each Produces 9 <img src="Images\\Gold.png" height="25" width="25"/>`;
 
-        setInterval(function () {
+        mineInterval = setInterval(function () {
             for (let i = 0; i < mines; i++) {
                 resources.gold += 9;
             }
@@ -169,7 +173,8 @@ document.getElementById("lumbermillbtn").addEventListener("click", function () {
 
     if (resources.gold >= lumbermillCostGold && resources.stone >= lumbermillCostStone) {
         console.log("Recursos são suficientes para construir uma Serralheria");
-
+        
+        clearInterval(lumberMillInterval);
         resources.gold -= lumbermillCostGold;
         resources.stone -= lumbermillCostStone;
         lumberMills += 1;
@@ -181,7 +186,7 @@ document.getElementById("lumbermillbtn").addEventListener("click", function () {
         document.getElementById("lumbermillcoststone").innerHTML = `<img src="Images\\Stone.png" height="25" width="25"/> ${lumbermillCostStone}`;
         document.getElementById("lumbermillgives").innerHTML = `${lumberMills} Lumber Mills, Each Produces 7 <img src="Images\\Lumber.png" height="25" width="25"/>`;
 
-        setInterval(function () {
+        lumberMillInterval = setInterval(function () {
             for (let i = 0; i < lumberMills; i++) {
                 resources.lumber += 7;
             }
